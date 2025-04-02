@@ -1,0 +1,146 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "/.angular",
+    "/.husky",
+    "/.idea",
+    "/.vscode",
+    "/dist",
+    "/documentation",
+    "/kubernates",
+    "/node_modules",
+    "/*.*"
+  ],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "createDefaultProgram": true,
+        "project": ["tsconfig.json"]
+      },
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:@typescript-eslint/strict",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "@typescript-eslint/no-unsafe-argument": "warn",
+        "@typescript-eslint/no-unsafe-assignment": "warn",
+        "@typescript-eslint/no-unsafe-call": "warn",
+        "@typescript-eslint/no-unsafe-member-access": "warn",
+        "@typescript-eslint/no-unsafe-return": "warn",
+        "@typescript-eslint/no-unsafe-enum-comparison": "off",
+        // ### Generic ES rules ###
+        "arrow-body-style": ["warn", "as-needed"],
+        "curly": "error",
+        "no-labels": "error",
+        "no-caller": "error",
+        "no-bitwise": "error",
+        "no-console": [
+          "warn",
+          {
+            "allow": ["info", "warn", "error"]
+          }
+        ],
+        "no-array-constructor": "error",
+        "no-object-constructor": "error",
+        "no-new-wrappers": "error",
+        "no-eval": "error",
+        "dot-notation": "off",
+        "no-throw-literal": "error",
+        "no-undef-init": "error",
+        "no-unused-expressions": "warn",
+        "no-unused-vars": "warn",
+        "no-var": "error",
+        "prefer-const": "error",
+        "eqeqeq": [
+          "error",
+          "always",
+          {
+            "null": "ignore"
+          }
+        ],
+        // ### TypeScript Specific Rules ###
+        "@typescript-eslint/no-shadow": "error",
+        "@typescript-eslint/unbound-method": [
+          "error",
+          {
+            "ignoreStatic": true
+          }
+        ],
+        "@typescript-eslint/unified-signatures": "warn",
+        "@typescript-eslint/no-extraneous-class": [
+          "warn",
+          {
+            "allowEmpty": true
+          }
+        ],
+        "@typescript-eslint/member-ordering": "off",
+        "@typescript-eslint/naming-convention": [
+          "warn",
+          {
+            "selector": "default",
+            "format": ["camelCase", "PascalCase"]
+          },
+          {
+            "selector": "variable",
+            "format": ["camelCase", "UPPER_CASE"]
+          },
+          {
+            "selector": "parameter",
+            "format": ["camelCase"]
+          },
+          {
+            "selector": "memberLike",
+            "format": ["camelCase"]
+          },
+          {
+            "selector": "typeLike",
+            "format": ["PascalCase"]
+          },
+          {
+            "selector": "enumMember",
+            "format": ["UPPER_CASE"]
+          }
+        ],
+        "@typescript-eslint/prefer-reduce-type-parameter": "off",
+        // ### Angular Specific Rules ###
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/prefer-standalone-component": "error",
+        "@angular-eslint/no-empty-lifecycle-method": "warn",
+        "@angular-eslint/no-host-metadata-property": "off",
+        "@angular-eslint/no-input-rename": "off",
+        "@angular-eslint/no-output-rename": "off",
+        "@angular-eslint/prefer-on-push-component-change-detection": "warn"
+      }
+    },
+    {
+      "files": ["*.html"],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended",
+        "plugin:@angular-eslint/template/accessibility",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "@angular-eslint/template/prefer-self-closing-tags": "warn",
+        "@angular-eslint/template/prefer-control-flow": "error"
+      }
+    }
+  ]
+}
