@@ -96,7 +96,7 @@
       "skipTests": true,
       "changeDetection": "OnPush",
       "style": "none",
-      "prefix": "ne"
+      "prefix": "cham"
     },
     "@schematics/angular:class": {
       "skipTests": true
